@@ -23,13 +23,22 @@ article {
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
+      display: flex;
+      place-content: center;
+      place-items: center;
+      gap: 8px;
+
+      & img.icon {
+        width: 16px;
+        height: 16px;
+      }
     }
 
     & h1 {
       color: #2b283a;
       font-size: 25px;
       font-weight: 700;
-      margin: 26px 0 4px 0;
+      margin: 26px 0 5px 0;
     }
     & p {
       color: #f47d27;
