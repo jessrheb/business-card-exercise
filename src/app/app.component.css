@@ -1,50 +1,27 @@
+:host {
+  --article-background: #f5f5f5;
+  --body: #4a4e74;
+  --footer-background: #d5d4d8;
+  --footer-body: #4a4e74;
+  --header-heading: #2b283a;
+  --main-heading: #2b283a;
+  --subheading: #f47d27;
+}
+.dark-theme {
+  --article-background: #1a1b21;
+  --body: #dcdcdc;
+  --footer-background: #161619;
+  --footer-body: #f5f5f5;
+  --header-heading: #ffffff;
+  --main-heading: #f5f5f5;
+  --subheading: #f3bf99;
+}
 article {
-  background-color: #f5f5f5;
+  background-color: var(--article-background);
   border-radius: 10px;
   margin: 32px auto;
   width: 317px;
 
-  & header {
-    gap: 10px;
-
-    & img {
-      border-radius: 10px 10px 0 0;
-      width: 100%;
-    }
-
-    & button.email {
-      width: calc(100% - 70px);
-      height: 34px;
-      background-color: #fff;
-      color: #374151;
-      border: 1px solid #d1d5db;
-      box-shadow: 0px 1px 2px 0px #0000000d;
-      border-radius: 6px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
-      display: flex;
-      place-content: center;
-      place-items: center;
-      gap: 8px;
-
-      & img.icon {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    & h1 {
-      color: #2b283a;
-      font-size: 25px;
-      font-weight: 700;
-      margin: 26px 0 5px 0;
-    }
-    & p {
-      color: #f47d27;
-      font-size: 12px;
-    }
-  }
   & header,
   & header hgroup.heading {
     display: flex;
@@ -56,6 +33,45 @@ article {
       line-height: 100%;
     }
   }
+  & header {
+    gap: 10px;
+
+    & img {
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+    }
+    & button.email {
+      background-color: #fff;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      box-shadow: 0px 1px 2px 0px #0000000d;
+      color: #374151;
+      display: flex;
+      font-size: 14px;
+      font-weight: 500;
+      gap: 8px;
+      height: 34px;
+      line-height: 16px;
+      place-content: center;
+      place-items: center;
+      width: calc(100% - 70px);
+
+      & img.icon {
+        height: 16px;
+        width: 16px;
+      }
+    }
+    & h1 {
+      color: var(--header-heading);
+      font-size: 25px;
+      font-weight: 700;
+      margin: 26px 0 5px 0;
+    }
+    & p {
+      color: var(--subheading);
+      font-size: 12px;
+    }
+  }
   & main {
     padding: 0 35px;
 
@@ -63,21 +79,21 @@ article {
       margin-top: 32px;
     }
     & h2 {
-      color: #2b283a;
+      color: var(--main-heading);
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 6px;
     }
     & p {
-      color: #4a4e74;
+      color: var(--body);
       font-size: 12px;
       line-height: 150%;
     }
   }
   & footer {
-    background-color: #d5d4d8;
+    background-color: var(--footer-background);
     border-radius: 0 0 10px 10px;
-    color: #4a4e74;
+    color: var(--footer-body);
     display: flex;
     font-size: 12px;
     height: 40px;
