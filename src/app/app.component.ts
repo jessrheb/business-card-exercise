@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,20 +6,19 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  email = 'jrkgs@cesar.org.br';
-  subject = 'Contato';
-  body = 'Gostaria de tirar uma dúvida';
-  mailto = `mailto:${this.email}?subject=${this.subject}&body=${this.body}`;
-  prefersDarkTheme = window.matchMedia?.('(prefers-color-scheme: dark)')
-    .matches;
-
-  emailMe() {
-    window.open(this.mailto);
+  protected emailMe() {
+    const email = 'jrkgs@cesar.org.br';
+    const subject = 'Contato';
+    const body = 'Gostaria de tirar uma dúvida';
+    globalThis.open(`mailto:${email}?subject=${subject}&body=${body}`);
   }
 
   ngOnInit() {
-    this.prefersDarkTheme
-      ? document.querySelector('article').classList.add('dark-theme')
-      : null;
+    const prefersDarkTheme = globalThis.matchMedia?.(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    if (prefersDarkTheme) {
+      document.querySelector('article').classList.add('dark-theme');
+    }
   }
 }
