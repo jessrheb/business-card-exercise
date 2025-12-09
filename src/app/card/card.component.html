@@ -1,0 +1,23 @@
+<article>
+    <header>
+        <img src="../assets/avatar.jpg" alt="Avatar">
+        <hgroup class="heading">
+            <h1>Jessicah Rhebeccah</h1>
+            <p>Desenvolvedora Front-End</p>
+        </hgroup>
+        <div class="buttons-container">
+            <app-button [buttonIcon]="emailIcon" [buttonLabel]="emailLabel" (buttonClick)="emailMe()"></app-button>
+            <app-button [buttonIcon]="linkedInIcon" [buttonLabel]="linkedInLabel" buttonBackgroundColor="#297fe5"
+                buttonColor="#ffffff" (buttonClick)="followMe()"></app-button>
+        </div>
+    </header>
+    <main>
+        <app-paragraph heading="Sobre mim"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ex libero reiciendis obcaecati dolor iusto repudiandae voluptatum quod accusamus odit voluptates enim, quam modi provident eum perferendis doloremque suscipit animi!"></app-paragraph>
+        <app-paragraph heading="Interesses" description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aspernatur excepturi error numquam
+                voluptatibus, alias minus! Ea modi aliquid ex omnis vero. Vel exercitationem nam perspiciatis quia
+                aperiam
+                molestiae quas."></app-paragraph>
+    </main>
+    <footer>© Todos os direitos reservados</footer>
+</article>
